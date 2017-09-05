@@ -1,6 +1,5 @@
 package me.stonerivers.config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -15,10 +14,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
         @ComponentScan.Filter(value = org.springframework.web.bind.annotation.ControllerAdvice.class)
 })
 @EnableAspectJAutoProxy(proxyTargetClass = true)
+//@Import({me.stonerivers.config.profiles.Dev.class,me.stonerivers.config.profiles.Master.class})
 public class ApplicationContextConfig {
-    @Bean
-    public String message() {
-        return "lala";
-    }
+
 
 }
